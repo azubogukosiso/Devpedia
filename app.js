@@ -7,7 +7,7 @@ const app = express();
 const dotenv = require('dotenv');
 dotenv.config();
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 
 // enable file upload
 app.use(
