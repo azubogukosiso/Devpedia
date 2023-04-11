@@ -1,0 +1,4 @@
+/.env
+/node_modules
+/lorem-gen.html
+/public/bootstrap-5.1.3-dist
