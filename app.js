@@ -28,7 +28,7 @@ const profileRoutes = require("./routes/profileRoutes");
 const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 
 // connection to the dbase
-mongoose.connect(process.env.MONGO_URL, {
+mongoose.connect(process.env.MONGO_URL_MAIN, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
