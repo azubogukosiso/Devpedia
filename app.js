@@ -31,12 +31,19 @@ const { requireAuth, checkUser } = require("./middleware/authMiddleware");
 mongoose.connect(process.env.MONGO_URL_MAIN, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-});
+})
+// .then(() => {
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error: "));
 db.once("open", function () {
-  app.listen(PORT);
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
 });
+// })
+// .catch((err) => {
+//   console.error("Error connecting to MongoDB:", err);
+// });
 
 // set view engine
 app.set("view engine", "ejs");

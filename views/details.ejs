@@ -17,7 +17,7 @@
 				<div class="container">
 					<% if (blog.header_image.data==undefined) { %>
 						<div class="mx-auto my-5 header-image-container">
-							<img class="img-fluid rounded header-image" src="http://localhost:3001/default.png" alt="">
+							<img class="img-fluid rounded header-image" src="<%= apiUrl %>default.png" alt="">
 						</div>
 						<% } else { %>
 							<div class="mx-auto my-5 header-image-container">
